@@ -1,0 +1,5 @@
+(display "hello, world")
+(display (/ 4 (- 5.5 1.5)))
+(display (- (expt 5 2) (/ 4 (- 5.5 1.5))))
+(display (+ 16 (* 8 (- (sqrt 9)))))
+(display (/ (- (expt 5 2) (/ 4 (- 5.5 1.5))) (+ 16 (* 8 (- (sqrt 9))))))

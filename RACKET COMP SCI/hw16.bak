@@ -1,0 +1,16 @@
+; 1st line
+(display "hw14#3a. length of other leg: ")
+(display (sqrt(abs(- (expt 12 2)(expt 13 2)))))
+(display " units")
+
+; 2nd line
+(display "\n")
+(display "\n")
+
+; 3rd line
+(display "hw14#3b. quotient: ")
+(display (/ (/ 11 22)(- (expt 5 2.5) 123)))
+(display " units")
+
+; 4th line
+(display "That's all, folks!")

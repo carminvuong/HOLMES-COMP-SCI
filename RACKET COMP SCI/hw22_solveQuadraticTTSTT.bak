@@ -1,0 +1,22 @@
+; the quadratic equation of interest:
+;   -0.618x^2 + 1.618x + 1.732 = 0
+
+(display "One solution is approximately ")
+(display (/
+          (+ -1.618
+             (sqrt (- (expt 1.618 2) (* 4 -0.618 1.732)) )
+             )
+          2 -0.618
+          )
+         )
+(display "\n\n")
+
+(display "The other solution is approximately ")
+(display (/
+          (- -1.618
+             (sqrt (- (expt 1.618 2) (* 4 -0.618 1.732)) )
+             )
+          2 -0.618
+          )
+         )
+

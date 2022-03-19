@@ -1,0 +1,19 @@
+; task 1d: symbols for coefficients of the first equation,
+;   -0.618x^2 + 1.618x + 1.732 = 0
+(define a -0.618)
+(define b 1.618 )
+(define c 1.732 )
+
+; task 4: an intermediate value that will be used twice:
+(define discriminant_sqrt (sqrt (- (* b b) (* 4 a c))) )
+
+; display solutions
+(display "One solution is approximately ")
+(display (/
+          (+ (- b)  ; Finally! a valuable use of negation!
+             discriminant_sqrt
+             )
+          2 a  ; n-ary division! numerator/ (2*a) = numerator/2/a
+          )
+         )
+(display "\n")  

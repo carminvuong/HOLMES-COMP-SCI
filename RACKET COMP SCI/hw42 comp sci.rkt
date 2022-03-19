@@ -1,0 +1,47 @@
+#|  hw#41
+    Carmin Vuong <mvuong40@stuy.edu>
+    worked with no one
+    advised by no one
+|#
+
+
+; Calculate the instructions for Michael The Bot to
+; move "nDisks" from "source" to "target" using "spare".
+; Corresponds to the Manual for a Monastery.
+(define instructionsForBot
+  (lambda (nDisks source target spare)
+    (announcementsForInstructions nDisks source target spare)
+    
+    "stub, to be replaced by code that produces the instructions, eventually"
+  ))
+
+
+; new announcement helper procedure
+(define announcementsForInstructions
+ (lambda (nDisks source target spare)
+   ; Announce what will happen,
+    ; corresponding to the Manual's instruction to
+    ; "Tell us what was requested of you"
+    (display "I will move the top ")
+    (display nDisks)
+    (display " disks \nfrom ")
+    (display source)
+    (display "\nto ")
+    (display target)
+    (display "\nusing ")
+    (display spare)
+    (display " if the Manual says to.\n\n"))
+ )
+
+(define separator "\n-----------------\n\n")
+
+; corresponds to Abbot:
+; test 0: an easy one
+(display (instructionsForBot 1 "Hanoi"  "HCMC"  "Da Nang"))
+(display separator)
+
+
+; corresponds to Abbot:
+; test 1: next step up
+(display (instructionsForBot 2 "Kingman"  "Barstow"  "Berdoo"))
+(display separator)

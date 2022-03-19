@@ -1,0 +1,9 @@
+(define classSize 34)
+(display classSize) (display "\n")
+
+(define sandwichCost 5)
+(display sandwichCost) (display "\n")
+
+;(define classLunchBudget   your calculation here )
+;(display classLunchBudget) (display "\n")
+

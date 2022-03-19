@@ -1,0 +1,12 @@
+(display   ; means "make dots of light on the screen
+           ; that can represent value of the argument"
+ (   ;means "invoke the instructions in a procedure"
+
+  ; Package instructions into a procedure...
+  (lambda (x) ; ...that relies on 1 parameter
+    (+ x 2)   ; ...and that produces a value 2 larger.
+    )         ; end of "Package instructions into a procedure"
+
+  5  ; Supply an argument to the invocation
+  )  ; end of "invoke the instructions in a procedure"
+ )   ; end of Display

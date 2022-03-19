@@ -1,0 +1,15 @@
+; hw 49: fibonacci rabbits
+; Carmin Vuong <mvuong40@stuy.edu>
+; worked with no one
+; advised by no one
+
+; testing comparison procedures other than =
+(display (> 5 3))    (display "\n")
+(display (<= 4 4))   (display "\n")
+(display (< 4 4))    (display "\n")
+
+(define fib
+  (lambda
+      (month)
+    )
+  )

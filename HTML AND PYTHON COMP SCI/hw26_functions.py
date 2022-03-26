@@ -12,29 +12,35 @@
 # compare the number of degrees in each scale between the
 # boiling and freezing points of water.
 
-def FtoC():
-    return 1
-waterFreezes_F = 32
-Degrees_F_per_C = (212 - waterFreezes_F ) / (100 - 0)
+
+#  Fahrenheit to Celsius Conversion
+def FtoC(tempInF):
+    waterFreezes_F = 32
+    Degrees_F_per_C = (212 - waterFreezes_F ) / (100 - 0)
+    return (tempInF - waterFreezes_F) / Degrees_F_per_C
 
 # freezing point of water: 32 F -> 0 C
-print( (32 - waterFreezes_F) / Degrees_F_per_C )
+print( FtoC(32) )
 
 # boiling point of water: 212 F -> 100 C
-print( (212 - waterFreezes_F) / Degrees_F_per_C )
+print( FtoC(212) )
 
 # room temperature: 68F -> 20C
-print( (68 - waterFreezes_F) / Degrees_F_per_C )
+print( FtoC(68) )
 
 
-#----------------------------------------------------------
-# Calculate specific Fibonnaci number using Binet's formula
-sqrt_five = 5 ** (1/2)
-phi = (1+sqrt_five)/2
-phi_conjugate = (1-sqrt_five)/2   # aka "psi"
 
-#7th Fibonacci number: expecting 13
-print( (phi**7 - phi_conjugate**7) / sqrt_five )
+# Celsius to Fahrenheit Conversion
+def CtoF(tempInC):
+    waterFreezes_F = 32
+    Degrees_F_per_C = (212 - waterFreezes_F ) / (100 - 0)
+    return (tempInC * Degrees_F_per_C) + waterFreezes_F
 
-#10th Fibonacci number: expecting 55
-print( (phi**10 - phi_conjugate**10) / sqrt_five )
+# freezing point of water: 0 C -> 32 F
+print( CtoF(0) ) 
+
+# boiling point of water: 100 C -> 212 F
+print( CtoF(100) ) 
+
+# room temperature: 20 C -> 68 F
+print( CtoF(20) ) 

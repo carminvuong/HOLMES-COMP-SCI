@@ -21,7 +21,7 @@ def FtoC(tempInF):
 
 # freezing point of water: 32 F -> 0 C
 print( FtoC(32) )
-
+ 
 # boiling point of water: 212 F -> 100 C
 print( FtoC(212) )
 
@@ -43,4 +43,4 @@ print( CtoF(0) )
 print( CtoF(100) ) 
 
 # room temperature: 20 C -> 68 F
-print( CtoF(20) ) 
+print( CtoF(20) )

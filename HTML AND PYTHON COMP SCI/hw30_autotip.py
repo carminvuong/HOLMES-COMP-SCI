@@ -57,7 +57,7 @@ def tipRate( partySize):
             return 0.0
 # --------------------------------------------------
 
-
+# 
 
 print( 'tests of autotip ***WITH 3-WAY tipRate***')
 print( autotip( 100.00, 12))
@@ -73,4 +73,4 @@ print()
 
 
 
-#aoisdioasoijjioajdiasjidjsdas
+# aoisdioasoijjioajdiasjidjsdas

@@ -22,12 +22,12 @@ def alternatingReverse23(string):
 
 print("tests for evenForward24(): ")
 print(evenForward24("012345678901234567890123")) # returns 024680246802
-print(evenForward24("O n l y E v e n N u m s ")) # return onlyevennums
+print(evenForward24("O n l y E v e n N u m s ")) # return OnlyEvenNums
 
 
 print("tests for alternatingReverse23(): ")
 print(alternatingReverse23("01234567890123456789012")) # return 208642086420
-print(alternatingReverse23("e s r e v e R r e t l A")) # return twelvecharac
+print(alternatingReverse23("e s r e v e R r e t l A")) # return AlterReverse
 
 
 

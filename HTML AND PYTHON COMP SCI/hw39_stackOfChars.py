@@ -1,6 +1,6 @@
 # Carmin Vuong
 # hw39
-# worked with no one
+# worked with Niki Chen
 # advised by no one
 
 def stackOfChars( lineOfChars):

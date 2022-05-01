@@ -56,10 +56,4 @@ def makeValidHTML(title, body):
     
 
 
-print( makeValidHTML("Stuy", stackOfChars( 'Stuy')))
-# expecting code like http://davidmholmes.net/Stuy/2intro/hw/hw39_stackOfStuy.html
-
-print( '\n', '-' * 50, '\n') # to separate results visually
-
-print( makeValidHTML("Phi", stackOfChars( '1.6180339887')))
-# expecting code like http://davidmholmes.net/Stuy/2intro/hw/hw39_stackOfPhi.html
+print(makeValidHTML("hw41", stackOfChars("Stuy") + '\n' + stackOfChars("1.6180339887")))

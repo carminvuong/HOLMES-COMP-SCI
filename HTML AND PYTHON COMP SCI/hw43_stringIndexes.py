@@ -3,7 +3,6 @@
 # worked with no one
 # advised by no one
 
-
 def stackOfChars( lineOfChars):
     # Returns html that most browsers will render as a column of characters
 
@@ -45,30 +44,20 @@ def headEl( title):
 newLine = "\n"
 
 def makeTableOfIndexes(string):
-    # accepts a string
-    # returns a table containing each character in "string" and their respective valid indexes
-
     tableBody = ""
     negIndex = -len(string)
 
     while negIndex <= -1:
-        tableBody += indexedCharsRow(negIndex, string[negIndex]) + newLine
+        tableBody += element("tr", newLine + element("td", str(negIndex)) + element("td", string[negIndex])) + newLine
         negIndex += 1
 
     posIndex = 0
     while posIndex < len(string):
-        tableBody += indexedCharsRow(posIndex, string[posIndex]) + newLine
+        tableBody += element("tr", newLine + element("td", str(posIndex)) + element("td", string[posIndex])) + newLine
         posIndex += 1
 
     return element("table", 
             "\n" + element("tbody", tableBody))
-
-def indexedCharsRow(index, char):
-    # accepts an integer as "index", and a single-character string as "char"
-    # returns a single row of a table, with 'index' in column 0 and 'char' in column 1
-
-    return element("tr", element("td", str(index)) +  element("td", char))
-    
 
 # # test element
 # print( element( 'tagName', 'contents', 'attributes'))
@@ -79,17 +68,13 @@ print( element( 'html'
                 + headEl( 'element hw')
                 + '\n'
                 + element( 'body'
-                         , makeTableOfIndexes("Stuy") + "\n<hr>\n" + 
-                         makeTableOfIndexes("Carmin") + "\n<hr>\n" + 
+                         , makeTableOfIndexes("Stuy") + "<hr>" + 
+                         makeTableOfIndexes("Carmin") + "<hr>" + 
                          makeTableOfIndexes("H")
                          )
               , 'lang="en-US"'   # attribute for <html> tag
               )
      )
-
-# # test indexedCharsRow
-# print(indexedCharsRow(-1, "a"))
-
 
 
 

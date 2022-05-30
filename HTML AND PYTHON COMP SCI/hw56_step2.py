@@ -25,11 +25,11 @@
 # function pirateWord() is called. It is a function that returns a word's corresponding pirate-version, abiding by the translation
 # rules. For each rule, pirateWord() invokes changeWithCapitilization(), which is a function that actually changes the word to its 
 # pirate-version, also accounting for capitilization. To differentiate between words with and without punctuation, I made the 
-# hasPunctuation() function that returns True if there is punctuation in a string. For the "Arr!" translation rule, I made a 
-# separate function called arr(). It works by first finding the indexes of all exclamation points (which marks the end
+# hasPunctuation() function that returns True if there is punctuation in a string. For the "Arrr!" translation rule, I made a 
+# separate function called arrr(). It works by first finding the indexes of all exclamation points (which marks the end
 # of a sentence), which is done by the findAllIndexes() function. To find every other index, I used range() with a step of 2.
 # I iterated through every character of the piratedString and if the index matched the index of every other exclamation mark,
-# the string " Arr!" is added. The main pirateSpeak() function returns the invocation of the arr() with piratedString as 
+# the string " Arrr!" is added. The main pirateSpeak() function returns the invocation of the arrr() with piratedString as 
 # the argument.
     
 def hasPunctuation(string):
@@ -100,9 +100,9 @@ def findAllIndexes(desiderata, string):
             indexes.append(index)
     return indexes
 
-def arr(string):
+def arrr(string):
     # precondition: takes a string
-    # postcondition: returns a new string with "Arr!" after every other sentence in "string"
+    # postcondition: returns a new string with "Arrr!" after every other sentence in "string"
 
     finalString = ""
     allIndexes = findAllIndexes("!", string)
@@ -113,13 +113,13 @@ def arr(string):
 
     for index, char in enumerate(string):
         if index in everyOther:
-            finalString += char + " Arr!"
+            finalString += char + " Arrr!"
         else:
             finalString += char
     return finalString
 
 def pirateSpeak(string):
-    # precondition: a string
+    # precondition: takes a string
     # postcondition: returns a new string with all of the pirate translation rules applied
 
     piratedString = ""
@@ -135,7 +135,7 @@ def pirateSpeak(string):
         else:
             piratedString += pirateWord(word) + space
 
-    return arr(piratedString[:-1])
+    return arrr(piratedString[:-1])
 
 # ------------ TEST CASES --------------
 
@@ -149,10 +149,10 @@ print( pirateSpeak("Myself myself myself."))  #Meself meself meself!
 print( pirateSpeak("For for for."))  #Fer fer fer!
 
 print(pirateSpeak("You YOU you, Your YOUR the The your. They're you're You're singing dings RINGING? I me Mine, I for For of Of!"))
-# Ye YE ye, Yers YERS t' T' yers! They be you be You be singin' dings RINGING! Arr! Me me Me, me fer Fer o' O'!
+# Ye YE ye, Yers YERS t' T' yers! They be you be You be singin' dings RINGING! Arrr! Me me Me, me fer Fer o' O'!
 
-print(pirateSpeak("I am your you myself Tho. The of?") == "Me be yers ye meself Tho! T' o'! Arr! ")
+print(pirateSpeak("I am your you myself Tho. The of?") == "Me be yers ye meself Tho! T' o'! Arrr! ")
 
-print(pirateSpeak("I AM you, myself IS mine, yourself is YOUR, the king. The Arr should be in the next sentence, of course. \
+print(pirateSpeak("I AM you, myself IS mine, yourself is YOUR, the king. The Arrr should be in the next sentence, of course. \
 You're going to be singing and they are yours."))
-#Me BE ye, meself BE me, yourself be YERS, t' kin'! T' Arr should be in t' next sentence, o' course! Arr! You be goin' to be singin' and they be yours!
+#Me BE ye, meself BE me, yourself be YERS, t' kin'! T' Arrr should be in t' next sentence, o' course! Arrr! You be goin' to be singin' and they be yours!

@@ -17,21 +17,21 @@
 # - add "Arrr!"" after every other sentence. [DONE]
 
 
-# ---------- description and how the code works ------------
+# ---------- description and how the code works -------------
 
-# The main function of my code pirateSpeak() works by splitting a string into separate words, which are ordered in a list. I used
-# a for loop to iterate through the list, using if statements to differentiate between words with and without punctuation. 
-# There are also some special cases that need to accounted for in this function. Each time the loop is run, the
+# The main function of my code pirateSpeak() works by splitting a string into separate words, using .split(). I used a
+# for loop to iterate through the list, using if statements to differentiate between words with and without punctuation. 
+# There are also some special cases that need to be accounted for in this function. Each time the loop is run, the
 # function pirateWord() is called. It is a function that returns a word's corresponding pirate-version, abiding by the translation
-# rules. For each rule, pirateWord() invokes changeWithCapitilization(), which is a function that actually changes the word to its 
-# pirate-version, also accounting for capitilization. To differentiate between words with and without punctuation, I made the 
-# hasPunctuation() function that returns True if there is punctuation in a string. For the "Arrr!" translation rule, I made a 
+# rules. For each rule, pirateWord() invokes changeWithCapitilization(), which is a function that changes the word to its 
+# pirate-version, accounting for capitilization. To differentiate between words with and without punctuation, I made the 
+# hasPunctuation() function which returns True if there is punctuation in the string. For the "Arrr!" translation rule, I made a 
 # separate function called arrr(). It works by first finding the indexes of all exclamation points (which marks the end
 # of a sentence), which is done by the findAllIndexes() function. To find every other index, I used range() with a step of 2.
 # I iterated through every character of the piratedString and if the index matched the index of every other exclamation mark,
-# the string " Arrr!" is added. The main pirateSpeak() function returns the invocation of the arrr() with piratedString as 
-# the argument.
-    
+# the string " Arrr!" is added.
+
+
 def hasPunctuation(string):
     # precondition: takes a string
     # postcondition: returns True if there is punctuation in string (question marks, periods, exclamation marks)

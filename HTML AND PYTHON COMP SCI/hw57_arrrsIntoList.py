@@ -96,7 +96,7 @@ def piratify( phrase):
 
     # Combine each sentence into the rephrased speech.
     rephrasing = ''
-    for sentence in arrrification:
+    for sentence in sentencesOfWords:
         rephrasing += ' '.join( sentence) + '! '
 
     return rephrasing
